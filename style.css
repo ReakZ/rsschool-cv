@@ -1,0 +1,35 @@
+main{
+  max-width: 1024px;
+  margin:auto;
+  position: relative;
+}
+.avatar{
+  position: relative;
+  margin: 0 30%;
+}
+
+header{
+  max-width: 1024px;
+  margin:auto;
+  position: relative;
+}
+.navbar-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+}
+
+footer{
+  max-width: 1024px;
+  margin:auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a{
+  text-decoration: none;
+}
