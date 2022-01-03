@@ -1,1 +1,1 @@
-https://ReakZ.github.io/rsschool-cv/cv
+https://ReakZ.github.io/rsschool-cv/
