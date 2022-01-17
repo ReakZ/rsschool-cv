@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Merriweather:wght@700&display=swap");
+// Variables
+
+$bg_dark: #000000;
+$gold: #bdae82;
+$white: #ffffff;
+$inter: "Inter", sans-serif;
+$merriweather: "Merriweather", serif;
+
+//main elements style start
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $inter;
+  background-color: $bg_dark;
+  color: $white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+//main elements style end
+
+
+//header start
+.header{
+  height: 90px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url('./assets/img/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center 0;
+  &__wrapper {
+display: flex;
+flex-direction: row;
+  }
+}
+
+.logo {
+  background-image: url('./assets/svg/logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+  min-width: 50px;
+  margin: 20px;
+}
+.logo:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.nav{
+  margin-left: auto;
+
+  &__list{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__link{
+    padding: 0 20px;
+    line-height: 50px;
+color:$white;
+    &:hover{
+color:$gold;
+    }
+  }
+}
+
+.gold{
+  color:$gold;
+  display: flex;
+  align-items: center;
+}
+.white{
+  color:$white;
+  margin-left: 10px;
+}
+//header end
