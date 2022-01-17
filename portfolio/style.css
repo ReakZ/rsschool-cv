@@ -39,10 +39,49 @@ h1 {
   line-height: 120px;
 }
 
+h2 {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 80px;
+  text-align: center;
+  background-color: #000000;
+  margin: 0 auto;
+  width: 150px;
+  color: #bdae82;
+}
+
+button {
+  border: 0;
+  color: #000000;
+  background-color: #bdae82;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  line-height: 40px;
+  width: 220px;
+  height: 55px;
+}
+
+button:hover {
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.section-title {
+  background-image: linear-gradient(to top, #000 39px, #bdae82 39px, #bdae82 41px, #000 41px);
+  width: 700px;
+  margin: 0 auto;
 }
 
 .header {
@@ -132,24 +171,73 @@ h1 {
   margin: 10px 0 25px;
 }
 
-button {
-  border: 0;
-  color: #000000;
-  background-color: #bdae82;
-  font-size: 20px;
-  font-family: "Inter", sans-serif;
-  text-align: center;
-  line-height: 40px;
-  width: 220px;
-  height: 55px;
+.skills__wrapper {
+  padding: 100px 0;
 }
 
-button:hover {
-  color: #ffffff;
-  cursor: pointer;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: .4s;
-  transition: .4s;
+.skills-list {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skills-list__item {
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  width: 300px;
+  height: 300px;
+  padding-top: 100px;
+}
+
+.skills-list__item:nth-child(1) {
+  background-image: url("./assets/svg/camera.svg");
+  background-size: 62px 50px;
+}
+
+.skills-list__item:nth-child(2) {
+  background-image: url("./assets/svg/video.svg");
+  background-size: 62px 50px;
+}
+
+.skills-list__item:nth-child(3) {
+  background-image: url("./assets/svg/image.svg");
+  background-size: 62px 50px;
+}
+
+.skills-list__item:nth-child(4) {
+  background-image: url("./assets/svg/mic.svg");
+  background-size: 62px 50px;
+}
+
+.skills-list__title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.skills-list__subtitle {
+  margin-top: 20px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 18px;
+  line-height: 36px;
 }
 /*# sourceMappingURL=style.css.map */

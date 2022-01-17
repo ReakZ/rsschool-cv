@@ -40,99 +40,26 @@ ul {
   list-style: none;
 }
 
-
-h1{
+h1 {
   font-family: $merriweather;
   font-weight: 700;
   font-size: 60px;
   line-height: 120px;
-
 }
-.wrapper {
-  max-width: 1440px;
+
+h2 {
+  font-family: $merriweather;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 80px;
+  text-align: center;
+  background-color: $bg_dark;
   margin: 0 auto;
-  padding: 0 20px;
-}
-//main elements style end
-
-
-//header start
-.header{
-  height: 90px;
-
-  width: 100%;
-
-  &__wrapper {
-    height: 90px;
-display: flex;
-flex-direction: row;
-background: url('./assets/img/bg.jpg');
-background-repeat: no-repeat;
-background-position: center 0;
-padding: 20px;
-  }
+  width: 150px;
+  color: $gold;
 }
 
-.logo {
-  background-image: url('./assets/svg/logo.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: 0.3s;
-  min-width: 50px;
-
-}
-.logo:hover {
-  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-    contrast(87%);
-}
-
-.nav{
-  margin-left: auto;
-
-  &__list{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  &__link{
-    padding: 0 20px;
-    line-height: 50px;
-color:$white;
-    &:hover{
-color:$gold;
-    }
-  }
-}
-
-.gold{
-  color:$gold;
-  display: flex;
-  align-items: center;
-}
-.white{
-  color:$white;
-  margin-left: 10px;
-}
-//header end
-
-//hero section start
-.hero{
-  &__wrapper{
-    background-image: url('./assets/img/bg.jpg');
-    background-position: center -90px;
-    background-repeat: no-repeat;
-padding: 160px 80px;
-  }
-&__text{
-  width: 400px;
-  margin: 10px 0 25px;
-
-}
-
-}
-//hero section end
-
-button{
+button {
   border: 0;
   color: $bg_dark;
   background-color: $gold;
@@ -142,10 +69,156 @@ button{
   line-height: 40px;
   width: 220px;
   height: 55px;
-  &:hover{
+  &:hover {
     color: $white;
     cursor: pointer;
     transform: scale(1.05);
-    transition: .4s;
+    transition: 0.4s;
   }
 }
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  background-image: linear-gradient(
+    to top,
+    #000 39px,
+    #bdae82 39px,
+    #bdae82 41px,
+    #000 41px
+  );
+  width: 700px;
+  margin: 0 auto;
+}
+//main elements style end
+
+//header start
+.header {
+  height: 90px;
+
+  width: 100%;
+
+  &__wrapper {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    background: url("./assets/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    padding: 20px;
+  }
+}
+
+.logo {
+  background-image: url("./assets/svg/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+  min-width: 50px;
+}
+.logo:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.nav {
+  margin-left: auto;
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__link {
+    padding: 0 20px;
+    line-height: 50px;
+    color: $white;
+    &:hover {
+      color: $gold;
+    }
+  }
+}
+
+.gold {
+  color: $gold;
+  display: flex;
+  align-items: center;
+}
+.white {
+  color: $white;
+  margin-left: 10px;
+}
+//header end
+
+//hero section start
+.hero {
+  &__wrapper {
+    background-image: url("./assets/img/bg.jpg");
+    background-position: center -90px;
+    background-repeat: no-repeat;
+    padding: 160px 80px;
+  }
+  &__text {
+    width: 400px;
+    margin: 10px 0 25px;
+  }
+}
+//hero section end
+
+
+//skills section start
+.skills__wrapper {
+  padding: 100px 0;
+}
+.skills-list {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &__item {
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 300px;
+    height: 300px;
+    padding-top: 100px;
+  }
+  &__item:nth-child(1) {
+    background-image: url("./assets/svg/camera.svg");
+    background-size: 62px 50px;
+  }
+
+  &__item:nth-child(2) {
+    background-image: url("./assets/svg/video.svg");
+    background-size: 62px 50px;
+  }
+  &__item:nth-child(3) {
+    background-image: url("./assets/svg/image.svg");
+    background-size: 62px 50px;
+  }
+  &__item:nth-child(4) {
+    background-image: url("./assets/svg/mic.svg");
+    background-size: 62px 50px;
+  }
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 40px;
+  }
+  &__subtitle {
+    margin-top: 20px;
+    font-weight: normal;
+    text-align: center;
+    font-size: 18px;
+    line-height: 36px;
+  }
+}
+
+//skills section end
