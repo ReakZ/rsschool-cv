@@ -37,6 +37,12 @@ img {
 
 a {
   text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+a:hover {
+  color: #bdae82;
 }
 
 ul {
@@ -58,7 +64,7 @@ h2 {
   text-align: center;
   background-color: #000000;
   margin: 0 auto;
-  width: 150px;
+  padding: 0 20px;
   color: #bdae82;
 }
 
@@ -91,6 +97,12 @@ button:hover {
   background-image: linear-gradient(to top, #000 39px, #bdae82 39px, #bdae82 41px, #000 41px);
   width: 700px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header {
@@ -501,6 +513,7 @@ button:hover {
   font-size: 20px;
   line-height: 40px;
   color: #bdae82;
+  resize: none;
 }
 
 .contact__textarea::-webkit-input-placeholder {
@@ -525,5 +538,96 @@ button:hover {
   font-family: inherit;
   color: #bdae82;
   font-size: 20px;
+}
+
+.footer__wrapper {
+  min-height: 140px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+}
+
+.footer__list > li {
+  margin-right: 20px;
+}
+
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+}
+
+.socials__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.socials__link:hover {
+  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
+.social-facebook {
+  background: url(./assets/svg/fb.svg) no-repeat center;
+}
+
+.social-instagram {
+  background: url(./assets/svg/inst.svg) no-repeat center;
+}
+
+.social-pinterest {
+  background: url(./assets/svg/pinterest.svg) no-repeat center;
+}
+
+.social-twitter {
+  background: url(./assets/svg/tw.svg) no-repeat center;
+}
+
+@media (max-width: 1439px) {
+  .skills-list {
+    width: 728px;
+    margin: 45px auto 0;
+  }
+  .season-block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 445px;
+  }
+  .examples {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 445px;
+  }
+  .price-block {
+    width: 450px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 50px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

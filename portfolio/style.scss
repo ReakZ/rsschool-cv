@@ -38,8 +38,13 @@ img {
 
 a {
   text-decoration: none;
-}
+  font-size: 20px;
+  color: $white;
 
+}
+a:hover{
+  color: $gold;
+}
 ul {
   list-style: none;
 }
@@ -59,7 +64,7 @@ h2 {
   text-align: center;
   background-color: $bg_dark;
   margin: 0 auto;
-  width: 150px;
+  padding: 0 20px;
   color: $gold;
 }
 
@@ -95,6 +100,8 @@ button {
   );
   width: 700px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 //main elements style end
 
@@ -358,7 +365,7 @@ button {
     background-repeat: no-repeat;
 
     background-size: auto 700px;
-  background-position: center center;
+    background-position: center center;
     padding: 20px;
     flex-direction: row;
     justify-content: flex-end;
@@ -408,6 +415,7 @@ button {
     font-size: 20px;
     line-height: 40px;
     color: $gold;
+    resize: none;
     &::placeholder {
       font-family: inherit;
       color: $gold;
@@ -416,3 +424,75 @@ button {
   }
 }
 //contact section end
+
+//footer start
+.footer{
+
+
+&__wrapper{
+min-height: 140px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+&__list{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+&__list>li{
+  margin-right: 20px;
+}
+}
+
+.socials{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+&__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  &:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+      contrast(87%);
+  }
+}}
+
+.social-facebook{
+  background:url(./assets/svg/fb.svg) no-repeat center;
+}
+
+.social-instagram{
+  background:url(./assets/svg/inst.svg) no-repeat center;
+}
+.social-pinterest{
+  background:url(./assets/svg/pinterest.svg) no-repeat center;
+}
+.social-twitter{
+  background:url(./assets/svg/tw.svg) no-repeat center;
+}
+//footer end
+
+
+//media
+@media (max-width: 1439px) {
+  .skills-list{
+    width: 728px;
+    margin: 45px auto 0;
+  }
+  .season-block {
+    flex-wrap: wrap;
+    width: 445px;
+  }
+  .examples{
+    justify-content: center;
+    width: 445px;
+  }
+  .price-block{
+    width: 450px;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+}
