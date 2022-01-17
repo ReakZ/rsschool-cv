@@ -224,7 +224,6 @@ button {
 //portfolio section start
 
 .season-block {
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -252,10 +251,93 @@ button {
   }
 }
 
-.examples{
+.examples {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   margin: 60px auto 0;
 }
 //portfolio section end
+//video section start
+.video {
+  padding-top: 100px;
+}
+.video-player {
+  margin: 60px auto 0;
+  width: 100%;
+  height: 705px;
+  background-image: url("./assets/img/video-player.png");
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__button {
+    background-image: url("./assets/svg/Play_hover.svg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 130px;
+    &:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+  }
+}
+//video section end
+
+//price section start
+.price{
+  padding-top: 100px;
+}
+.price-block {
+  margin: 60px auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &__item{
+    height: 505px;
+width: 450px;
+border: 2px solid $gold;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+
+  }
+  &__title {
+    font-family: $merriweather;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  &__cost {
+    margin: 20px 0;
+    font-family: $merriweather;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $gold;
+  }
+  &__option{
+    font-family: $inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 36px;
+letter-spacing: 0em;
+text-align: center;
+
+  }
+  &__list{
+    margin-bottom: 40px;
+  }
+}
+//price section end
