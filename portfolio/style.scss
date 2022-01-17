@@ -87,7 +87,7 @@ button {
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
+
 }
 
 .section-title {
@@ -170,17 +170,24 @@ button {
     background-position: center -90px;
     background-repeat: no-repeat;
     padding: 160px 80px;
+    height: 820px;
   }
   &__text {
-    width: 400px;
+    width: 550px;
     margin: 10px 0 25px;
   }
 }
 //hero section end
 
 //skills section start
-.skills__wrapper {
-  padding: 100px 0;
+// .skills__wrapper {
+//   padding: 100px 0;
+// }
+.skills{
+  margin-top: 100px;
+  &__wrapper{
+    padding: 0 20px;
+  }
 }
 .skills-list {
   margin-top: 60px;
@@ -233,7 +240,12 @@ button {
 //skills section end
 
 //portfolio section start
-
+.portfolio{
+  margin-top: 100px;
+  &__wrapper{
+    padding: 0 20px;
+  }
+}
 .season-block {
   display: flex;
   flex-direction: row;
@@ -264,7 +276,7 @@ button {
 .examples {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 25px;
   margin: 60px auto 0;
 }
 //portfolio section end
@@ -274,7 +286,7 @@ button {
 }
 .video-player {
   margin: 60px auto 0;
-  width: 100%;
+  width: 1400px;
   height: 705px;
   background-image: url("./assets/img/video-player.png");
   background-position: center;
@@ -306,6 +318,7 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 25px;
   &__item {
     height: 505px;
     width: 450px;
@@ -372,6 +385,7 @@ button {
   &__block {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
   &__title {
     font-family: $merriweather;
@@ -384,7 +398,8 @@ button {
     color: $gold;
     background-color: transparent;
     width: auto;
-    margin-bottom: 40px;
+    margin: 0 0 40px 0;
+    padding: 0;
   }
   &__input {
     width: 450px;
@@ -407,7 +422,7 @@ button {
     width: 450px;
     height: 100px;
     border: 2px solid $gold;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     background-color: transparent;
     padding: 5px 20px;
     font-family: $inter;
@@ -429,11 +444,12 @@ button {
 
 
 &__wrapper{
-min-height: 140px;
+min-height: 150px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 &__list{
   display: flex;

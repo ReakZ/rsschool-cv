@@ -90,7 +90,6 @@ button:hover {
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .section-title {
@@ -185,15 +184,20 @@ button:hover {
   background-position: center -90px;
   background-repeat: no-repeat;
   padding: 160px 80px;
+  height: 820px;
 }
 
 .hero__text {
-  width: 400px;
+  width: 550px;
   margin: 10px 0 25px;
 }
 
+.skills {
+  margin-top: 100px;
+}
+
 .skills__wrapper {
-  padding: 100px 0;
+  padding: 0 20px;
 }
 
 .skills-list {
@@ -262,6 +266,14 @@ button:hover {
   line-height: 36px;
 }
 
+.portfolio {
+  margin-top: 100px;
+}
+
+.portfolio__wrapper {
+  padding: 0 20px;
+}
+
 .season-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -302,7 +314,7 @@ button:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 5px;
+  gap: 25px;
   margin: 60px auto 0;
 }
 
@@ -312,7 +324,7 @@ button:hover {
 
 .video-player {
   margin: 60px auto 0;
-  width: 100%;
+  width: 1400px;
   height: 705px;
   background-image: url("./assets/img/video-player.png");
   background-position: center;
@@ -359,6 +371,7 @@ button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 25px;
 }
 
 .price-block__item {
@@ -449,6 +462,9 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .contact__title {
@@ -462,7 +478,8 @@ button:hover {
   color: #bdae82;
   background-color: transparent;
   width: auto;
-  margin-bottom: 40px;
+  margin: 0 0 40px 0;
+  padding: 0;
 }
 
 .contact__input {
@@ -506,7 +523,7 @@ button:hover {
   width: 450px;
   height: 100px;
   border: 2px solid #bdae82;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   background-color: transparent;
   padding: 5px 20px;
   font-family: "Inter", sans-serif;
@@ -541,7 +558,7 @@ button:hover {
 }
 
 .footer__wrapper {
-  min-height: 140px;
+  min-height: 150px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -552,6 +569,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 20px;
 }
 
 .footer__list {
