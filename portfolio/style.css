@@ -155,7 +155,7 @@ button:hover {
 }
 
 .nav__link {
-  padding: 0 20px;
+  padding: 0 15px;
   line-height: 50px;
   color: #ffffff;
 }
@@ -172,6 +172,9 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 30px;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 .white {
@@ -267,7 +270,7 @@ button:hover {
 }
 
 .portfolio {
-  margin-top: 100px;
+  margin-top: 40px;
 }
 
 .portfolio__wrapper {
@@ -359,6 +362,10 @@ button:hover {
   padding-top: 100px;
 }
 
+.price__wrapper {
+  padding: 0 20px;
+}
+
 .price-block {
   margin: 60px auto 0;
   display: -webkit-box;
@@ -368,9 +375,6 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   gap: 25px;
 }
 
@@ -465,6 +469,7 @@ button:hover {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin: 40px 0 0 0;
 }
 
 .contact__title {
@@ -596,6 +601,7 @@ button:hover {
       -ms-flex-direction: row;
           flex-direction: row;
   list-style: none;
+  gap: 10px;
 }
 
 .socials__link {

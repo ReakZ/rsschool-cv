@@ -143,7 +143,7 @@ button {
     align-items: center;
   }
   &__link {
-    padding: 0 20px;
+    padding: 0 15px;
     line-height: 50px;
     color: $white;
     &:hover {
@@ -156,6 +156,9 @@ button {
   color: $gold;
   display: flex;
   align-items: center;
+  margin-left: 30px;
+  font-weight: bold;
+  margin-left: 20px;
 }
 .white {
   color: $white;
@@ -241,7 +244,7 @@ button {
 
 //portfolio section start
 .portfolio{
-  margin-top: 100px;
+  margin-top: 40px;
   &__wrapper{
     padding: 0 20px;
   }
@@ -312,12 +315,15 @@ button {
 //price section start
 .price {
   padding-top: 100px;
+  &__wrapper{
+    padding: 0 20px;
+  }
 }
 .price-block {
   margin: 60px auto 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+
   gap: 25px;
   &__item {
     height: 505px;
@@ -386,6 +392,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 40px 0 0 0;
   }
   &__title {
     font-family: $merriweather;
@@ -465,6 +472,7 @@ min-height: 150px;
   display: flex;
   flex-direction: row;
   list-style: none;
+  gap: 10px;
 &__link {
   display: block;
   width: 40px;
