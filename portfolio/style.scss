@@ -103,13 +103,14 @@ h1 {
 h2 {
   font-family: $merriweather;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 80px;
+  @include font4();
+  line-height: 80px !important;
   text-align: center;
   background-color: $bg_dark;
   margin: 0 auto;
   padding: 0 20px;
   color: $gold;
+
 }
 
 button {
@@ -148,6 +149,9 @@ button {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  @media  (max-width: 1440px)  {
+    width: 364px;
+  }
 }
 //main elements style end
 
@@ -225,6 +229,7 @@ button {
     height: 820px;
     @media  (max-width: 1440px)  {
       background-image: url("./assets/img/bg-small.jpg");
+      height: 500px;
     }
   }
   &__text {
@@ -344,12 +349,17 @@ button {
   width: 1400px;
   height: 705px;
   background-image: url("./assets/img/video-player.jpg");
+  background-repeat: no-repeat;
   background-position: center;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-
+@media (max-width:1440px) {
+  background-image: url("./assets/img/video-player-small.jpg");
+  height: 418px;
+  width: 768px;
+}
   &__button {
     background-image: url("./assets/svg/Play_hover.svg");
     background-color: transparent;
@@ -516,6 +526,10 @@ button {
   }
   &__list > li {
     margin-right: 20px;
+  }
+
+  @media (max-width:1440px) {
+   // width: 768px;
   }
 }
 

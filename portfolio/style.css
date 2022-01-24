@@ -77,11 +77,19 @@ h2 {
   font-weight: 700;
   font-size: 40px;
   line-height: 80px;
+  line-height: 80px !important;
   text-align: center;
   background-color: #000000;
   margin: 0 auto;
   padding: 0 20px;
   color: #bdae82;
+}
+
+@media (max-width: 1440px) {
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 
 button {
@@ -124,6 +132,12 @@ button:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 1440px) {
+  .section-title {
+    width: 364px;
+  }
 }
 
 .header {
@@ -221,6 +235,7 @@ button:hover {
 @media (max-width: 1440px) {
   .hero__wrapper {
     background-image: url("./assets/img/bg-small.jpg");
+    height: 500px;
   }
 }
 
@@ -370,6 +385,7 @@ button:hover {
   width: 1400px;
   height: 705px;
   background-image: url("./assets/img/video-player.jpg");
+  background-repeat: no-repeat;
   background-position: center;
   position: relative;
   display: -webkit-box;
@@ -381,6 +397,14 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 1440px) {
+  .video-player {
+    background-image: url("./assets/img/video-player-small.jpg");
+    height: 418px;
+    width: 768px;
+  }
 }
 
 .video-player__button {
