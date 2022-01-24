@@ -7,6 +7,53 @@ $white: #ffffff;
 $inter: "Inter", sans-serif;
 $merriweather: "Merriweather", serif;
 
+
+@mixin font1{
+  font-size: 20px;
+  line-height: 50px;
+}
+
+@mixin font2 {
+  font-size: 20px;
+  line-height: 40px;
+
+  @media (max-width: 1440px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+@mixin font3 {
+  font-size: 18px;
+  line-height: 36px;
+}
+
+@mixin font4 {
+  font-size: 40px;
+  line-height: 80px;
+  @media (max-width: 1440px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@mixin font5 {
+  font-size: 28px;
+  line-height: 56px;
+}
+
+@mixin font6 {
+  font-size: 24px;
+  line-height: 48px;
+}
+
+@mixin font7 {
+  font-size: 60px;
+  line-height: 120px;
+  @media (max-width: 1440px) {
+    font-size: 32px;
+    line-height: 64px;
+  }
+}
 //main elements style start
 * {
   box-sizing: border-box;
@@ -23,8 +70,7 @@ body {
   background-color: $bg_dark;
   color: $white;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 40px;
+@include font2();
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -40,10 +86,10 @@ a {
   text-decoration: none;
   font-size: 20px;
   color: $white;
-
 }
-a:hover{
+a:hover {
   color: $gold;
+  transition: 0.3s;
 }
 ul {
   list-style: none;
@@ -52,8 +98,7 @@ ul {
 h1 {
   font-family: $merriweather;
   font-weight: 700;
-  font-size: 60px;
-  line-height: 120px;
+@include font7();
 }
 
 h2 {
@@ -87,7 +132,6 @@ button {
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
-
 }
 
 .section-title {
@@ -183,12 +227,10 @@ button {
 //hero section end
 
 //skills section start
-// .skills__wrapper {
-//   padding: 100px 0;
-// }
-.skills{
+
+.skills {
   margin-top: 100px;
-  &__wrapper{
+  &__wrapper {
     padding: 0 20px;
   }
 }
@@ -243,9 +285,9 @@ button {
 //skills section end
 
 //portfolio section start
-.portfolio{
+.portfolio {
   margin-top: 40px;
-  &__wrapper{
+  &__wrapper {
     padding: 0 20px;
   }
 }
@@ -256,7 +298,6 @@ button {
   gap: 5px;
   margin: 60px auto 0;
   width: 64%;
-
 }
 
 .button-transparent {
@@ -291,7 +332,7 @@ button {
   margin: 60px auto 0;
   width: 1400px;
   height: 705px;
-  background-image: url("./assets/img/video-player.png");
+  background-image: url("./assets/img/video-player.jpg");
   background-position: center;
   position: relative;
   display: flex;
@@ -305,8 +346,9 @@ button {
     width: 130px;
     height: 130px;
     &:hover {
-      transform: scale(1.05);
       transition: 0.3s;
+      filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+        brightness(92%) contrast(87%);
     }
   }
 }
@@ -315,7 +357,7 @@ button {
 //price section start
 .price {
   padding-top: 100px;
-  &__wrapper{
+  &__wrapper {
     padding: 0 20px;
   }
 }
@@ -447,61 +489,60 @@ button {
 //contact section end
 
 //footer start
-.footer{
-
-
-&__wrapper{
-min-height: 150px;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-&__list{
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-}
-&__list>li{
-  margin-right: 20px;
-}
+.footer {
+  &__wrapper {
+    min-height: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+  &__list > li {
+    margin-right: 20px;
+  }
 }
 
-.socials{
+.socials {
   display: flex;
   flex-direction: row;
   list-style: none;
   gap: 10px;
-&__link {
-  display: block;
-  width: 40px;
-  height: 40px;
-  &:hover {
-    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
-      contrast(87%);
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    &:hover {
+      filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+        brightness(92%) contrast(87%);
+    }
   }
-}}
-
-.social-facebook{
-  background:url(./assets/svg/fb.svg) no-repeat center;
 }
 
-.social-instagram{
-  background:url(./assets/svg/inst.svg) no-repeat center;
+.social-facebook {
+  background: url(./assets/svg/fb.svg) no-repeat center;
 }
-.social-pinterest{
-  background:url(./assets/svg/pinterest.svg) no-repeat center;
+
+.social-instagram {
+  background: url(./assets/svg/inst.svg) no-repeat center;
 }
-.social-twitter{
-  background:url(./assets/svg/tw.svg) no-repeat center;
+.social-pinterest {
+  background: url(./assets/svg/pinterest.svg) no-repeat center;
+}
+.social-twitter {
+  background: url(./assets/svg/tw.svg) no-repeat center;
 }
 //footer end
 
-
 //media
-@media (max-width: 1439px) {
-  .skills-list{
+@media (max-width: 1440px) {
+
+  .skills-list {
     width: 728px;
     margin: 45px auto 0;
   }
@@ -509,11 +550,11 @@ min-height: 150px;
     flex-wrap: wrap;
     width: 445px;
   }
-  .examples{
+  .examples {
     justify-content: center;
     width: 445px;
   }
-  .price-block{
+  .price-block {
     width: 450px;
     flex-wrap: wrap;
     gap: 50px;

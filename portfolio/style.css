@@ -30,6 +30,13 @@ body {
           justify-content: space-between;
 }
 
+@media (max-width: 1440px) {
+  body {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -43,6 +50,8 @@ a {
 
 a:hover {
   color: #bdae82;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 ul {
@@ -54,6 +63,13 @@ h1 {
   font-weight: 700;
   font-size: 60px;
   line-height: 120px;
+}
+
+@media (max-width: 1440px) {
+  h1 {
+    font-size: 32px;
+    line-height: 64px;
+  }
 }
 
 h2 {
@@ -329,7 +345,7 @@ button:hover {
   margin: 60px auto 0;
   width: 1400px;
   height: 705px;
-  background-image: url("./assets/img/video-player.png");
+  background-image: url("./assets/img/video-player.jpg");
   background-position: center;
   position: relative;
   display: -webkit-box;
@@ -352,10 +368,10 @@ button:hover {
 }
 
 .video-player__button:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 
 .price {
@@ -631,7 +647,7 @@ button:hover {
   background: url(./assets/svg/tw.svg) no-repeat center;
 }
 
-@media (max-width: 1439px) {
+@media (max-width: 1440px) {
   .skills-list {
     width: 728px;
     margin: 45px auto 0;
