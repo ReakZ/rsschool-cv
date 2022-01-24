@@ -104,8 +104,14 @@ button:hover {
 }
 
 .wrapper {
-  max-width: 1440px;
+  width: 1440px;
   margin: 0 auto;
+}
+
+@media (max-width: 1440px) {
+  .wrapper {
+    width: 768px;
+  }
 }
 
 .section-title {
@@ -138,6 +144,12 @@ button:hover {
   background-repeat: no-repeat;
   background-position: center 0;
   padding: 20px;
+}
+
+@media (max-width: 1440px) {
+  .header__wrapper {
+    background-image: url("./assets/img/bg-small.jpg");
+  }
 }
 
 .logo {
@@ -206,9 +218,21 @@ button:hover {
   height: 820px;
 }
 
+@media (max-width: 1440px) {
+  .hero__wrapper {
+    background-image: url("./assets/img/bg-small.jpg");
+  }
+}
+
 .hero__text {
   width: 470px;
   margin: 10px 0 25px;
+}
+
+@media (max-width: 1440px) {
+  .hero__text {
+    margin: 20px 0 60px;
+  }
 }
 
 .skills {

@@ -7,8 +7,7 @@ $white: #ffffff;
 $inter: "Inter", sans-serif;
 $merriweather: "Merriweather", serif;
 
-
-@mixin font1{
+@mixin font1 {
   font-size: 20px;
   line-height: 50px;
 }
@@ -70,7 +69,7 @@ body {
   background-color: $bg_dark;
   color: $white;
   font-weight: 400;
-@include font2();
+  @include font2();
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -98,7 +97,7 @@ ul {
 h1 {
   font-family: $merriweather;
   font-weight: 700;
-@include font7();
+  @include font7();
 }
 
 h2 {
@@ -130,8 +129,11 @@ button {
   }
 }
 .wrapper {
-  max-width: 1440px;
+  width: 1440px;
   margin: 0 auto;
+  @media  (max-width: 1440px)  {
+    width: 768px;
+  }
 }
 
 .section-title {
@@ -163,6 +165,9 @@ button {
     background-repeat: no-repeat;
     background-position: center 0;
     padding: 20px;
+    @media  (max-width: 1440px)  {
+      background-image: url("./assets/img/bg-small.jpg");
+    }
   }
 }
 
@@ -218,10 +223,16 @@ button {
     background-repeat: no-repeat;
     padding: 160px 80px;
     height: 820px;
+    @media  (max-width: 1440px)  {
+      background-image: url("./assets/img/bg-small.jpg");
+    }
   }
   &__text {
     width: 470px;
     margin: 10px 0 25px;
+    @media  (max-width: 1440px)  {
+      margin: 20px 0 60px;
+    }
   }
 }
 //hero section end
@@ -541,7 +552,6 @@ button {
 
 //media
 @media (max-width: 1440px) {
-
   .skills-list {
     width: 728px;
     margin: 45px auto 0;
