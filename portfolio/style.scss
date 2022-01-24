@@ -110,7 +110,6 @@ h2 {
   margin: 0 auto;
   padding: 0 20px;
   color: $gold;
-
 }
 
 button {
@@ -132,7 +131,7 @@ button {
 .wrapper {
   width: 1440px;
   margin: 0 auto;
-  @media  (max-width: 1440px)  {
+  @media (max-width: 1440px) {
     width: 768px;
   }
 }
@@ -149,7 +148,7 @@ button {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  @media  (max-width: 1440px)  {
+  @media (max-width: 1440px) {
     width: 364px;
   }
 }
@@ -169,7 +168,7 @@ button {
     background-repeat: no-repeat;
     background-position: center 0;
     padding: 20px;
-    @media  (max-width: 1440px)  {
+    @media (max-width: 1440px) {
       background-image: url("./assets/img/bg-small.jpg");
     }
   }
@@ -189,12 +188,38 @@ button {
 
 .nav {
   margin-left: auto;
-
+  overflow: hidden;
   &__list {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    @media (max-width: 1440px) {
+      width: 620px;
+      top: 0;
+      right: calc(-620px);
+      transition: 0.5s;
+      width: 620px;
+      padding: 134px 0 0 127px;
+      height: 100%;
+      align-items: flex-start;
+      align-items: left;
+      text-align: left;
+    }
+    &-show {
+      transition: 0.5s;
+      display: block;
+      flex-direction: column;
+      z-index: 100;
+      background: $bg_dark;
+      overflow: hidden;
+      position: absolute;
+      justify-content: start;
+
+      right: 0px;
+
+    }
   }
+
   &__link {
     padding: 0 15px;
     line-height: 50px;
@@ -212,10 +237,68 @@ button {
   margin-left: 30px;
   font-weight: bold;
   margin-left: 20px;
+  @media (max-width: 1440px) {
+    margin-left: auto;
+  }
 }
 .white {
   color: $white;
   margin-left: 10px;
+}
+
+.burger {
+  display: none;
+  z-index: 900;
+  @media (max-width: 1440px) {
+    width: 50px;
+    margin-left: 20px;
+    display: block;
+    background: none;
+    border: none;
+
+  }
+}
+
+.burger .line{
+  width: 50px;
+  height: 5px;
+  background-color: $white;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.burger:hover{
+  cursor: pointer;
+}
+
+
+.burger.is-active .line:nth-child(2){
+  opacity: 0;
+}
+
+.burger.is-active .line:nth-child(1){
+  transform: translateY(13px) rotate(-135deg);
+}
+
+.burger.is-active .line:nth-child(3){
+  transform: translateY(-13px) rotate(135deg);
+}
+
+.body-overflow{
+  overflow: hidden;
+}
+
+.nav-bg{
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  position: fixed;
 }
 //header end
 
@@ -227,7 +310,7 @@ button {
     background-repeat: no-repeat;
     padding: 160px 80px;
     height: 820px;
-    @media  (max-width: 1440px)  {
+    @media (max-width: 1440px) {
       background-image: url("./assets/img/bg-small.jpg");
       height: 500px;
     }
@@ -235,7 +318,7 @@ button {
   &__text {
     width: 470px;
     margin: 10px 0 25px;
-    @media  (max-width: 1440px)  {
+    @media (max-width: 1440px) {
       margin: 20px 0 60px;
     }
   }
@@ -355,11 +438,11 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-@media (max-width:1440px) {
-  background-image: url("./assets/img/video-player-small.jpg");
-  height: 418px;
-  width: 768px;
-}
+  @media (max-width: 1440px) {
+    background-image: url("./assets/img/video-player-small.jpg");
+    height: 418px;
+    width: 768px;
+  }
   &__button {
     background-image: url("./assets/svg/Play_hover.svg");
     background-color: transparent;
@@ -396,9 +479,9 @@ button {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    @media (max-width:1440px) {
+    @media (max-width: 1440px) {
       width: 420px;
-      margin:0 auto;
+      margin: 0 auto;
     }
   }
   &__title {
@@ -454,7 +537,7 @@ button {
     padding: 20px;
     flex-direction: row;
     justify-content: flex-end;
-    @media (max-width:1440px) {
+    @media (max-width: 1440px) {
       background-image: url("./assets/img/contacts-small.jpg");
       height: 600px;
       width: 768px;
@@ -466,8 +549,8 @@ button {
     flex-direction: column;
     align-items: flex-start;
     margin: 40px 0 0 0;
-    @media (max-width:1440px) {
-    align-items: center;
+    @media (max-width: 1440px) {
+      align-items: center;
     }
   }
   &__title {
@@ -532,11 +615,11 @@ button {
     align-items: center;
     padding: 0 20px;
 
-    @media (max-width:1440px) {
+    @media (max-width: 1440px) {
       flex-direction: column;
-    margin: 28px 0;
+      margin: 28px 0;
 
-    gap:20px;
+      gap: 20px;
     }
   }
   &__list {
@@ -548,8 +631,8 @@ button {
     margin-right: 20px;
   }
 
-  @media (max-width:1440px) {
-   // width: 768px;
+  @media (max-width: 1440px) {
+    // width: 768px;
   }
 }
 
@@ -604,3 +687,5 @@ button {
     gap: 50px;
   }
 }
+
+

@@ -182,6 +182,7 @@ button:hover {
 
 .nav {
   margin-left: auto;
+  overflow: hidden;
 }
 
 .nav__list {
@@ -194,6 +195,44 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 1440px) {
+  .nav__list {
+    width: 620px;
+    top: 0;
+    right: calc(-620px);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    width: 620px;
+    padding: 134px 0 0 127px;
+    height: 100%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    text-align: left;
+  }
+}
+
+.nav__list-show {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 100;
+  background: #000000;
+  overflow: hidden;
+  position: absolute;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  right: 0px;
 }
 
 .nav__link {
@@ -219,9 +258,71 @@ button:hover {
   margin-left: 20px;
 }
 
+@media (max-width: 1440px) {
+  .gold {
+    margin-left: auto;
+  }
+}
+
 .white {
   color: #ffffff;
   margin-left: 10px;
+}
+
+.burger {
+  display: none;
+  z-index: 900;
+}
+
+@media (max-width: 1440px) {
+  .burger {
+    width: 50px;
+    margin-left: 20px;
+    display: block;
+    background: none;
+    border: none;
+  }
+}
+
+.burger .line {
+  width: 50px;
+  height: 5px;
+  background-color: #ffffff;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger:hover {
+  cursor: pointer;
+}
+
+.burger.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(13px) rotate(-135deg);
+          transform: translateY(13px) rotate(-135deg);
+}
+
+.burger.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(135deg);
+          transform: translateY(-13px) rotate(135deg);
+}
+
+.body-overflow {
+  overflow: hidden;
+}
+
+.nav-bg {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
 }
 
 .hero__wrapper {
