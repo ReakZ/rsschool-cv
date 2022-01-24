@@ -461,6 +461,13 @@ button:hover {
           align-items: center;
 }
 
+@media (max-width: 1440px) {
+  .price-block__item {
+    width: 420px;
+    margin: 0 auto;
+  }
+}
+
 .price-block__title {
   font-family: "Merriweather", serif;
   font-size: 28px;
@@ -508,7 +515,7 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("./assets/img/contacts.jpg");
+  background-image: url("./assets/img/contacts.jpg");
   background-repeat: no-repeat;
   background-size: auto 700px;
   background-position: center center;
@@ -520,6 +527,17 @@ button:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+@media (max-width: 1440px) {
+  .contact__wrapper {
+    background-image: url("./assets/img/contacts-small.jpg");
+    height: 600px;
+    width: 768px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .contact__block {
@@ -534,6 +552,14 @@ button:hover {
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 40px 0 0 0;
+}
+
+@media (max-width: 1440px) {
+  .contact__block {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .contact__title {
@@ -639,6 +665,17 @@ button:hover {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 20px;
+}
+
+@media (max-width: 1440px) {
+  .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 28px 0;
+    gap: 20px;
+  }
 }
 
 .footer__list {
