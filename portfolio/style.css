@@ -1,4 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Merriweather:wght@700&display=swap");
+.light-theme {
+  background-color: #fff;
+  color: #000;
+}
+
+.light-theme .title {
+  background-color: #fff;
+  color: #000000;
+}
+
+.light-theme .section-title {
+  background-image: linear-gradient(to top, #fff 39px, #000 39px, #000 41px, #fff 41px);
+}
+
+.light-theme:hover {
+  color: #000;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -140,6 +158,10 @@ button:hover {
   }
 }
 
+.section-title.light-theme {
+  background-image: linear-gradient(to top, #fff 39px, #bdae82 39px, #bdae82 41px, #fff 41px);
+}
+
 .header {
   height: 90px;
   width: 100%;
@@ -255,6 +277,12 @@ button:hover {
   font-size: 20px;
   line-height: 50px;
   margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .nav__link {
@@ -347,6 +375,27 @@ button:hover {
   position: fixed;
 }
 
+.switchTheme {
+  background-image: url("./assets/svg/carbon_sun.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  min-width: 45px;
+  background-color: transparent;
+  margin-left: 30px;
+}
+
+.switchTheme:hover {
+  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
+.switchTheme.active {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
 .hero__wrapper {
   background-image: url("./assets/img/bg.jpg");
   background-position: center -90px;
@@ -374,7 +423,7 @@ button:hover {
 }
 
 .skills {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .skills__wrapper {
@@ -448,7 +497,7 @@ button:hover {
 }
 
 .portfolio {
-  margin-top: 40px;
+  padding-top: 40px;
 }
 
 .portfolio__wrapper {
@@ -565,7 +614,7 @@ button:hover {
 }
 
 .price {
-  padding-top: 100px;
+  padding: 100px 0;
 }
 
 .price__wrapper {
@@ -644,10 +693,6 @@ button:hover {
 
 .price-block__list {
   margin-bottom: 40px;
-}
-
-.contact {
-  padding-top: 100px;
 }
 
 .contact__wrapper {

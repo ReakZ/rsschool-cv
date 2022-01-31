@@ -109,6 +109,8 @@ function burger() {
     document.querySelector(".nav__list").classList.toggle("nav__list-show");
     document.querySelector("body").classList.toggle("body-overflow");
     document.querySelector(".nav").classList.toggle("nav-bg");
+
+
   });
 
   //
@@ -188,4 +190,17 @@ function translate(lang) {
       string.textContent = i18Obj[lang][string.dataset.i18n];
     }
   });
+}
+
+
+let btn= document.querySelector(".switchTheme")
+btn.addEventListener("click",changeTheme)
+function changeTheme(){
+ document.querySelector('.switchTheme').classList.toggle('active')
+
+  const category=['.portfolio','.skills','.video','.price']
+  category.forEach(x=>{
+document.querySelector(x).classList.toggle('light-theme')
+  })
+
 }
