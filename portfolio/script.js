@@ -5,8 +5,8 @@ const i18Obj = {
     video: "Video",
     price: "Price",
     contacts: "Contacts",
-    'en':'en',
-    'ru':'ru',
+    en: "en",
+    ru: "ru",
     "hero-title": "Alexa Rise",
     "hero-text":
       "Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise",
@@ -55,8 +55,8 @@ const i18Obj = {
     video: "Видео",
     price: "Цены",
     contacts: "Контакты",
-    'en':'ан',
-    'ru':'ру',
+    en: "ан",
+    ru: "ру",
     "hero-title": "Алекса Райс",
     "hero-text":
       "Сохраните искренние эмоции, романтические переживания и счастливые моменты жизни вместе с профессиональным фотографом",
@@ -109,8 +109,6 @@ function burger() {
     document.querySelector(".nav__list").classList.toggle("nav__list-show");
     document.querySelector("body").classList.toggle("body-overflow");
     document.querySelector(".nav").classList.toggle("nav-bg");
-
-
   });
 
   //
@@ -169,18 +167,22 @@ function changeClassActive(el, e) {
   document.querySelectorAll(el).forEach((targer) => {
     targer.classList.remove("active");
   });
-  e.target.classList.add("active");
+  e.classList.add("active");
 }
 
 function switchLang(e) {
   if (e.target.classList.contains("nav__langBtn")) {
     translate(e.target.dataset.lang);
-    changeClassActive(".nav__langBtn", e);
   }
 }
 
 function translate(lang) {
   const strings = document.querySelectorAll("[data-i18n]");
+  LocalStorageLang(lang);
+  changeClassActive(
+    ".nav__langBtn",
+    document.querySelector(`[data-lang="${lang}"`)
+  );
   strings.forEach((string) => {
     if (string.placeholder) {
       string.placeholder = i18Obj[lang][string.dataset.i18n];
@@ -192,15 +194,60 @@ function translate(lang) {
   });
 }
 
+let btn = document.querySelector(".switchTheme");
+btn.addEventListener("click", switchTheme);
 
-let btn= document.querySelector(".switchTheme")
-btn.addEventListener("click",changeTheme)
-function changeTheme(){
- document.querySelector('.switchTheme').classList.toggle('active')
-
-  const category=['.portfolio','.skills','.video','.price']
-  category.forEach(x=>{
-document.querySelector(x).classList.toggle('light-theme')
-  })
-
+function switchTheme(){
+ if(localStorage.getItem("theme")==='dark'){
+  localStorage.setItem("theme","light")
+ }
+ else{
+  localStorage.setItem("theme","dark")
+ }
+ changeTheme()
 }
+function changeTheme() {
+  let theme= localStorage.getItem("theme")
+
+  const category = [".portfolio", ".skills", ".video", ".price"];
+  if (theme === "light") {
+    document.querySelector(".switchTheme").classList.add("active");
+    category.forEach((x) => {
+      document.querySelector(x).classList.add("light-theme");
+    });
+  } else {
+    document.querySelector(".switchTheme").classList.remove("active");
+    category.forEach((x) => {
+      document.querySelector(x).classList.remove("light-theme");
+    });
+  }
+}
+
+function setLocalStorage() {
+  localStorage.setItem("lang", lang);
+  localStorage.setItem("theme", theme);
+}
+function LocalStorageLang(lang) {
+  localStorage.setItem("lang", lang);
+}
+function LocalStorageTheme(theme) {
+  localStorage.setItem("theme", theme);
+}
+window.addEventListener("beforeunload", setLocalStorage);
+
+function getLocalStorage() {
+  if (localStorage.getItem("lang")) {
+    const lang = localStorage.getItem("lang");
+    translate(lang);
+  } else {
+    localStorage.setItem("lang", "en");
+  }
+
+  if (localStorage.getItem("theme")) {
+    const theme = localStorage.getItem("theme");
+    changeTheme(theme);
+  } else {
+    localStorage.setItem("theme", "dark");
+  }
+}
+window.addEventListener("load", getLocalStorage);
