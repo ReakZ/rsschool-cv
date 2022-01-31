@@ -433,7 +433,7 @@ button:hover {
   padding: 0 20px;
 }
 
-.season-block {
+.season-btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,7 +448,7 @@ button:hover {
   width: 64%;
 }
 
-.button-transparent {
+.season-btn {
   border: 2px solid #bdae82;
   color: #bdae82;
   background-color: transparent;
@@ -460,7 +460,26 @@ button:hover {
   height: 55px;
 }
 
-.button-transparent:hover {
+.season-btn:hover {
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.season-btn.active {
+  border: 0;
+  color: #000000;
+  background-color: #bdae82;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  line-height: 40px;
+  width: 220px;
+  height: 55px;
+}
+
+.season-btn.active:hover {
   color: #ffffff;
   cursor: pointer;
   -webkit-transition: 0.4s;

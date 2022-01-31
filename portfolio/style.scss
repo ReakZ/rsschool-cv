@@ -53,6 +53,24 @@ $merriweather: "Merriweather", serif;
     line-height: 64px;
   }
 }
+
+
+@mixin button{
+  border: 0;
+  color: $bg_dark;
+  background-color: $gold;
+  font-size: 20px;
+  font-family: $inter;
+  text-align: center;
+  line-height: 40px;
+  width: 220px;
+  height: 55px;
+  &:hover {
+    color: $white;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+}
 //main elements style start
 * {
   box-sizing: border-box;
@@ -113,20 +131,7 @@ h2 {
 }
 
 button {
-  border: 0;
-  color: $bg_dark;
-  background-color: $gold;
-  font-size: 20px;
-  font-family: $inter;
-  text-align: center;
-  line-height: 40px;
-  width: 220px;
-  height: 55px;
-  &:hover {
-    color: $white;
-    cursor: pointer;
-    transition: 0.4s;
-  }
+@include button();
 }
 .wrapper {
   width: 1440px;
@@ -390,7 +395,7 @@ button {
     padding: 0 20px;
   }
 }
-.season-block {
+.season-btns {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -399,7 +404,7 @@ button {
   width: 64%;
 }
 
-.button-transparent {
+.season-btn {
   border: 2px solid $gold;
   color: $gold;
   background-color: transparent;
@@ -416,6 +421,9 @@ button {
   }
 }
 
+.season-btn.active {
+  @include button();
+}
 .examples {
   display: flex;
   flex-wrap: wrap;
