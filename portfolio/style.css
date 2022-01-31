@@ -235,6 +235,28 @@ button:hover {
   right: 0px;
 }
 
+.nav__langBtn {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 50px;
+  border: none;
+  width: 25px;
+  height: 50px;
+  background-color: transparent;
+}
+
+.nav__langBtn.active {
+  color: #bdae82;
+}
+
+.nav__langBtns {
+  width: 70px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  margin-left: 30px;
+}
+
 .nav__link {
   padding: 0 15px;
   line-height: 50px;

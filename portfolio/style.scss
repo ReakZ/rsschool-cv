@@ -54,8 +54,7 @@ $merriweather: "Merriweather", serif;
   }
 }
 
-
-@mixin button{
+@mixin button {
   border: 0;
   color: $bg_dark;
   background-color: $gold;
@@ -131,7 +130,7 @@ h2 {
 }
 
 button {
-@include button();
+  @include button();
 }
 .wrapper {
   width: 1440px;
@@ -221,10 +220,26 @@ button {
       justify-content: start;
 
       right: 0px;
-
+    }
+  }
+  &__langBtn {
+    color: $white;
+    @include font1();
+    border: none;
+    width: 25px;
+    height: 50px;
+    background-color: transparent;
+    &.active {
+      color: $gold;
     }
   }
 
+  &__langBtns {
+    width: 70px;
+    height: 50px;
+    @include font1();
+    margin-left: 30px;
+  }
   &__link {
     padding: 0 15px;
     line-height: 50px;
@@ -260,11 +275,10 @@ button {
     display: block;
     background: none;
     border: none;
-
   }
 }
 
-.burger .line{
+.burger .line {
   width: 50px;
   height: 5px;
   background-color: $white;
@@ -273,34 +287,32 @@ button {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-
 }
 
-.burger:hover{
+.burger:hover {
   cursor: pointer;
 }
 
-
-.burger.is-active .line:nth-child(2){
+.burger.is-active .line:nth-child(2) {
   opacity: 0;
 }
 
-.burger.is-active .line:nth-child(1){
+.burger.is-active .line:nth-child(1) {
   transform: translateY(13px) rotate(-135deg);
 }
 
-.burger.is-active .line:nth-child(3){
+.burger.is-active .line:nth-child(3) {
   transform: translateY(-13px) rotate(135deg);
 }
 
-.body-overflow{
+.body-overflow {
   overflow: hidden;
 }
 
-.nav-bg{
+.nav-bg {
   width: 100%;
   height: 100%;
-  top:0;
+  top: 0;
   left: 0;
   background-color: rgba($color: #000000, $alpha: 0.5);
   position: fixed;
@@ -695,5 +707,3 @@ button {
     gap: 50px;
   }
 }
-
-
