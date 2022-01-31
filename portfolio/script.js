@@ -159,7 +159,7 @@ function changeImages(e) {
     seasonImages.forEach(
       (img, index) => (img.src = `./assets/img/${season}/${index + 1}.jpg`)
     );
-    changeClassActive(".season-btn", e);
+    changeClassActive(".season-btn", e.target);
   }
 }
 
@@ -251,3 +251,16 @@ function getLocalStorage() {
   }
 }
 window.addEventListener("load", getLocalStorage);
+
+
+function preloadSeasonsImages() {
+  const seasons = ['winter', 'spring', 'summer', 'autumn']
+  seasons.forEach(season=>{
+    for(let i = 1; i <= 6; i++) {
+      const img = new Image();
+      img.src = `./assets/img/${season}/${i}.jpg`;
+    }
+  })
+
+}
+preloadSeasonsImages();
