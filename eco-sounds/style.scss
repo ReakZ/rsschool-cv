@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+$black: #000;
+$white: #fff;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+  transition: 0.3s;
+  &:hover {
+    color: #bdae82;
+  }
+}
+body {
+  background-color: $black;
+  color: $white;
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+  line-height: 2rem;
+}
+
+button {
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  background-color: transparent;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button.active {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+// Header start
+.header {
+  width: 100%;
+  margin: 0 auto;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+  }
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background-image: url("./assets/svg/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s;
+  &:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+      brightness(92%) contrast(87%);
+  }
+}
+
+.container {
+  width: calc(100% - 20px);
+  max-width: 1440px;
+  padding: 0px 20px;
+  margin: 0 auto;
+}
+
+.nav {
+  margin-left: auto;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+  }
+  &__button {
+    background: transparent;
+    color: $white;
+    border: none;
+    padding: 5px 15px;
+  }
+}
+// Header end
+
+// Main start
+.main {
+  height: calc(100vh - 160px);
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player {
+  background-image: url("./assets/svg/play.svg");
+  width: 160px;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: 0.3s;
+  &:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+      brightness(92%) contrast(87%);
+  }
+}
+.player.pause {
+  transition: 0.3s;
+  background-image: url("./assets/svg/pause.svg");
+}
+.main.solovey {
+  border-color: green;
+  background-image: url(./assets/img/solovey.jpg);
+}
+
+.main.drozd {
+  border-color: white;
+  background-image: url(./assets/img/drozd.jpg);
+}
+
+.main.zarynka {
+  border-color: orangered;
+  background-image: url(./assets/img/zarynka.jpg);
+}
+.main.javoronok {
+  border-color: lightblue;
+  background-image: url(./assets/img/javoronok.jpg);
+}
+.main.slavka {
+  border-color: lightcoral;
+  background-image: url(./assets/img/slavka.jpg);
+}
+
+// Main end
+
+// Footer start
+.footer {
+  height: 80px;
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__rss {
+    background-image: url("./assets/svg/rss.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 135px;
+    height: 50px;
+    &:hover {
+      filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+        brightness(92%) contrast(87%);
+    }
+  }
+}
+// Footer end
