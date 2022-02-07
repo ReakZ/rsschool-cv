@@ -118,7 +118,6 @@ button.active {
 }
 
 .main {
-  background-image: url(./assets/img/solovey.jpg);
   height: calc(100vh - 160px);
   background-size: cover;
   background-position: center;
@@ -152,13 +151,34 @@ button.active {
 }
 
 .player.pause {
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   background-image: url("./assets/svg/pause.svg");
 }
 
-main.solovey {
+.main.solovey {
   border-color: green;
+  background-image: url(./assets/img/solovey.jpg);
+}
+
+.main.drozd {
+  border-color: white;
+  background-image: url(./assets/img/drozd.jpg);
+}
+
+.main.zarynka {
+  border-color: orangered;
+  background-image: url(./assets/img/zarynka.jpg);
+}
+
+.main.javoronok {
+  border-color: lightblue;
+  background-image: url(./assets/img/javoronok.jpg);
+}
+
+.main.slavka {
+  border-color: lightcoral;
+  background-image: url(./assets/img/slavka.jpg);
 }
 
 .footer {
