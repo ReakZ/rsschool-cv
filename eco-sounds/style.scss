@@ -21,6 +21,8 @@ button {
   transition: 0.3s;
   font-size: inherit;
   line-height: inherit;
+  border: none;
+  background-color: transparent;
   &:hover {
     text-decoration: underline;
   }
@@ -81,3 +83,35 @@ button.active {
   }
 }
 // Header end
+
+// Main start
+.main {
+  background-image: url(./assets/img/solovey.jpg);
+  height: calc(100vh - 240px);
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.player{
+  background-image: url("./assets/svg/play.svg");
+  width: 160px;
+  height: 160px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+transition: .3s;
+&:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+    brightness(92%) contrast(87%);
+}
+}
+main.solovey{
+  border-color:green;
+}
+// Main end
