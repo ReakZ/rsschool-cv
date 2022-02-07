@@ -120,6 +120,10 @@ button.active {
       brightness(92%) contrast(87%);
   }
 }
+.player.pause{
+  transition: .3s;
+  background-image: url("./assets/svg/pause.svg");
+}
 main.solovey {
   border-color: green;
 }

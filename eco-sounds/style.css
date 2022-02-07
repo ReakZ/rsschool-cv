@@ -151,6 +151,12 @@ button.active {
           filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 
+.player.pause {
+  -webkit-transition: .3s;
+  transition: .3s;
+  background-image: url("./assets/svg/pause.svg");
+}
+
 main.solovey {
   border-color: green;
 }
