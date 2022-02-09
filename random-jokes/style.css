@@ -6,6 +6,19 @@
   padding: 0;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a:hover {
+  cursor: pointer;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
 body {
   font-size: 20px;
   font-family: "Inter", sans-serif;
@@ -53,12 +66,39 @@ body {
   cursor: pointer;
   border-radius: 5px;
   width: 100%;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .quote__btn:hover {
   color: #49a6e9;
   background: #063251;
+}
+
+.footer {
+  background-color: #49a6e9;
+  height: 100px;
+  color: white;
+}
+
+.footer__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__rss {
+  background-image: url("./assets/svg/rss.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 135px;
+  height: 50px;
 }
 /*# sourceMappingURL=style.css.map */
