@@ -39,7 +39,7 @@ body {
 
 .quote {
   width: 50%;
-  height: 20%;
+  height: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,6 +57,16 @@ body {
           justify-content: space-between;
 }
 
+.quote__ctl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
 .quote__btn {
   font-size: 20px;
   padding: 5px 20px;
@@ -65,7 +75,7 @@ body {
   border: 2px solid #49a6e9;
   cursor: pointer;
   border-radius: 5px;
-  width: 100%;
+  width: 75%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -73,6 +83,30 @@ body {
 .quote__btn:hover {
   color: #49a6e9;
   background: #063251;
+}
+
+.quote__langBtn {
+  width: 20%;
+  border: none;
+  color: white;
+  font-size: 32px;
+  border-radius: 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  background: -webkit-gradient(linear, left top, right top, from(#c8c8eb), color-stop(50%, #6464eb), color-stop(75%, #3c32eb), to(#0000eb));
+  background: linear-gradient(to right, #c8c8eb, #6464eb 50%, #3c32eb 75%, #0000eb 100%);
+}
+
+.quote__langBtn__ant {
+  -webkit-transition: .3s;
+  transition: .3s;
+  background: -webkit-gradient(linear, right top, left top, from(#c8c8eb), color-stop(50%, #6464eb), color-stop(75%, #3c32eb), to(#0000eb));
+  background: linear-gradient(to left, #c8c8eb, #6464eb 50%, #3c32eb 75%, #0000eb 100%);
+}
+
+.quote__langBtn:hover {
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
 }
 
 .footer {
