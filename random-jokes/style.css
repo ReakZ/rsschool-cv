@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Englebert&family=Inter&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+a:hover {
+  cursor: pointer;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+body {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.main {
+  width: 100%;
+  background-color: transparent;
+  height: calc(100vh - 100px);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 5px 20px;
+  height: 100%;
+}
+
+.quote {
+  width: 50%;
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 200px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #f7e999;
+  padding: 10px 10px 25px;
+  border-radius: 5px;
+}
+
+.quote__title {
+  width: 100%;
+  margin: 0 auto;
+  text-align: start;
+  border-bottom: 2px solid black;
+  font-family: "Englebert", sans-serif;
+}
+
+.quote__text {
+  font-family: "Englebert", sans-serif;
+}
+
+.quote__author {
+  width: 100%;
+  text-align: end;
+  text-decoration: underline;
+}
+
+.quote__ctl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.quote__btn {
+  font-size: 20px;
+  padding: 5px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border-color: transparent;
+  border-radius: 5px;
+  width: 75%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.quote__btn:hover {
+  color: white;
+  background-color: black;
+}
+
+.quote__langBtn {
+  width: 20%;
+  border: none;
+  color: white;
+  font-size: 28px;
+  border-radius: 5px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: -webkit-gradient(linear, right top, left top, from(black), color-stop(40%, black), color-stop(60%, transparent), to(transparent));
+  background: linear-gradient(to left, black 0%, black 40%, transparent 60%, transparent 100%);
+}
+
+.quote__langBtn__ant {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: -webkit-gradient(linear, left top, right top, from(black), color-stop(40%, black), color-stop(60%, transparent), to(transparent));
+  background: linear-gradient(to right, black 0%, black 40%, transparent 60%, transparent 100%);
+}
+
+.quote__langBtn:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1px solid blueviolet;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: transparent;
+  border-top: 2px solid white;
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  height: 100px;
+  color: white;
+}
+
+.footer__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__rss {
+  background-image: url("./assets/svg/rss.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 135px;
+  height: 50px;
+}
+/*# sourceMappingURL=style.css.map */
