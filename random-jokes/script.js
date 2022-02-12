@@ -2,6 +2,7 @@ const btnNextQuote = document.querySelector(".quote__btn");
 const btnChangeLang = document.querySelector(".quote__langBtn");
 const quoteText = document.querySelector(".quote__text");
 const quoteAuthor = document.querySelector(".quote__author");
+const main = document.querySelector("body");
 const urlsQutes = {
   en: "https://type.fit/api/quotes",
   ru: "./assets/quotes.json",
@@ -28,11 +29,13 @@ function changeQuote() {
 }
 
 async function getQuotes(urlQ) {
+
   const res = await fetch(urlQ);
   const data = await res.json();
   const lengthMassiveQuotes = data.length;
   const numberOfQuote = generateRandomNumber(0, lengthMassiveQuotes - 1);
   showQuote(data[numberOfQuote]);
+  changeQuoteEffect()
 }
 
 function generateRandomNumber(min, max) {
@@ -57,4 +60,12 @@ function switchBtn() {
   } else {
     btnChangeLang.classList.remove("quote__langBtn__ant");
   }
+}
+
+function changeQuoteEffect(){
+main.style.background=`linear-gradient(to bottom right, ${generateRandomColor()},${generateRandomColor()} 20%, ${generateRandomColor()} 40%, ${generateRandomColor()} 60%, ${generateRandomColor()}  80%, ${generateRandomColor()}  100%)`
+}
+
+function generateRandomColor(){
+ return `rgb(${generateRandomNumber(0,200)},${generateRandomNumber(0,200)},${generateRandomNumber(0,200)})`
 }
