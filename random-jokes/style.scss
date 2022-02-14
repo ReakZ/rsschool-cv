@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Englebert&family=Inter&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  &:hover {
+    cursor: pointer;
+    filter: invert(100%);
+  }
+}
+body {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+}
+.main {
+  width: 100%;
+  background-color: transparent;
+  height: calc(100vh - 100px);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 5px 20px;
+  height: 100%;
+}
+
+.quote {
+  width: 50%;
+  height: 40%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 200px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7e999;
+  padding: 10px 10px 25px;
+  border-radius: 5px;
+
+  &__title {
+    width: 100%;
+    margin: 0 auto;
+    text-align: start;
+    border-bottom: 2px solid black;
+    font-family: "Englebert", sans-serif;
+  }
+  &__text {
+    font-family: "Englebert", sans-serif;
+  }
+  &__author {
+    width: 100%;
+    text-align: end;
+    text-decoration: underline;
+  }
+  &__ctl {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__btn {
+    font-size: 20px;
+    padding: 5px 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border-color: transparent;
+    border-radius: 5px;
+    width: 75%;
+    transition: 0.5s;
+    &:hover {
+      color: white;
+      background-color: black;
+    }
+  }
+  &__langBtn {
+    width: 20%;
+    border: none;
+    color: white;
+    font-size: 28px;
+    border-radius: 5px;
+    transition: 0.3s;
+    background: linear-gradient(
+      to left,
+      black 0%,
+      black 40%,
+      transparent 60%,
+      transparent 100%
+    );
+    &__ant {
+      transition: 0.3s;
+      background: linear-gradient(
+        to right,
+        black 0%,
+        black 40%,
+        transparent 60%,
+        transparent 100%
+      );
+    }
+    &:hover {
+      transition: 0.3s;
+      border: 1px solid blueviolet;
+      cursor: pointer;
+    }
+  }
+}
+
+.footer {
+  background-color: transparent;
+  border-top: 2px solid white;
+  width: calc(100% - 50px);
+  margin: 0 auto;
+  height: 100px;
+  color: white;
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__rss {
+    background-image: url("./assets/svg/rss.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 135px;
+    height: 50px;
+  }
+}
