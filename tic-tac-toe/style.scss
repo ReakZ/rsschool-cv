@@ -1,12 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital@0;1&display=swap");
 
+$yellow: #fc0;
+$white: #fff;
+$black: #000;
+$bg-blue:#226293;
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+a {
+  color: $white;
+  text-decoration: none;
+}
 body {
-  background-color: #226293;
+  background-color: $bg-blue;
   font-family: "Merriweather Sans", sans-serif;
 }
 .container {
@@ -16,12 +25,13 @@ body {
   flex-direction: column;
   align-items: center;
 }
+//main start
 .header {
   width: 100%;
+  height: 300px;
   padding-top: 100px;
-
   &__title {
-    color: #fc0;
+    color: $yellow;
     font-size: 60px;
   }
   &__whoMove {
@@ -30,7 +40,7 @@ body {
   }
 }
 .main {
-  margin-top: 200px;
+  height: calc(100vh - 400px);
 }
 
 .board {
@@ -39,7 +49,33 @@ body {
     width: 100px;
     height: 100px;
     cursor: pointer;
-    border: 2px solid orange;
+    border: 2px solid $yellow;
     font-size: 28px;
   }
 }
+//Main end
+
+// footer start
+.footer {
+  height: 100px;
+  color: $white;
+
+  &__container {
+    border-top: 2px solid $white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  &__rss {
+    background-image: url("./assets/svg/rss.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 135px;
+    height: 50px;
+  }
+}
+// footer end
