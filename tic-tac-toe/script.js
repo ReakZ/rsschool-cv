@@ -1,6 +1,8 @@
 let board = document.querySelector(".board");
 board.addEventListener("click", clickCell);
 let whoMove = document.querySelector(".header__whoMove");
+let btnShowStatistic = document.querySelector(".footer__stat");
+btnShowStatistic.addEventListener("click", showStatistic);
 let isMovePlayerX = true;
 let moveCounter = 0;
 let listWinCombinations = [
@@ -34,7 +36,7 @@ function clickCell(e) {
 }
 
 function makeMove(id) {
-  playSound()
+  playSound();
   let cell = document.querySelector(`[data-id="${id}"]`);
   let currentMove = isMovePlayerX ? "X" : "O";
   cell.textContent = currentMove;
@@ -88,23 +90,21 @@ function perfomingWin() {
   } wins for ${moveCounter} turns`;
   updateStatistic(statistic);
   showModal({
-    title: "Congratulate !",
+    title: "Congratulations !",
     text: statistic,
     btn: "New game",
     func: restartGame,
   });
-
 }
 function perfomingDraw() {
   let statistic = `Draw`;
   updateStatistic(statistic);
   showModal({
-    title: "End of the game",
+    title: "Game ended in a tie !",
     text: statistic,
     btn: "New game",
     func: restartGame,
   });
-
 }
 
 function updateStatistic(statistic) {
@@ -152,7 +152,7 @@ function showModal(data) {
 
   let modalText = document.createElement("p");
   modalText.classList.add("modal__text");
-  modalText.textContent = data.text;
+  modalText.innerHTML = data.text;
   modal.appendChild(modalText);
 
   let modalButton = document.createElement("button");
@@ -161,7 +161,6 @@ function showModal(data) {
   modalButton.addEventListener("click", data.func);
   modal.appendChild(modalButton);
 }
-
 
 function closeModal() {
   document.querySelector(".modal__container").remove();
@@ -174,9 +173,25 @@ function restartGame() {
 }
 
 function playSound() {
-    let audio = document.createElement("audio");
-    audio.src = "./assets/sounds/tink.wav";
-    audio.currentTime = 0;
-    audio.volume = 0.2;
-    audio.play();
+  let audio = document.createElement("audio");
+  audio.src = "./assets/sounds/tink.wav";
+  audio.currentTime = 0;
+  audio.volume = 0.2;
+  audio.play();
+}
+
+function showStatistic() {
+  let stat = localStorage.getItem("last10Games")
+    ? JSON.parse(localStorage.getItem("last10Games"))
+    : [];
+  showModal({
+    title: "Last ten games:",
+    text: `<ul>${formatingStatistic(stat)}</ul>`,
+    btn: "Close",
+    func: closeModal,
+  });
+}
+
+function formatingStatistic(str) {
+  return str.map((x, i) => `<li>${i + 1}) ${x}</li>`).join("\n");
 }

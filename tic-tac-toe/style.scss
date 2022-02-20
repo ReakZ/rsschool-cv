@@ -9,12 +9,14 @@ $bg-blue: #226293;
   margin: 0;
   padding: 0;
 }
-
+ul{
+  list-style: none;
+}
 a {
   color: $white;
   text-decoration: none;
   &:hover{
-    filter: invert(100%);
+    filter: invert(30%);
   }
 
 }
@@ -84,6 +86,16 @@ body {
     width: 135px;
     height: 50px;
   }
+  &__stat{
+    background-color: transparent;
+    border: none;
+    color: $white;
+    font-size: 28px;
+    &:hover{
+      cursor: pointer;
+      filter: invert(30%);
+    }
+  }
 }
 // footer end
 
@@ -112,11 +124,13 @@ body {
   &__title {
     font-size: 50px;
     color: $yellow;
+    margin: 20px 50px;
   }
   &__text {
     font-size: 28px;
   }
   &__button {
+    margin: 20px 50px;
     width: 120px;
     height: 40px;
     font-size: 20px;

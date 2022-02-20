@@ -6,14 +6,18 @@
   padding: 0;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   color: #fff;
   text-decoration: none;
 }
 
 a:hover {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+  -webkit-filter: invert(30%);
+          filter: invert(30%);
 }
 
 body {
@@ -100,6 +104,19 @@ body {
   height: 50px;
 }
 
+.footer__stat {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+}
+
+.footer__stat:hover {
+  cursor: pointer;
+  -webkit-filter: invert(30%);
+          filter: invert(30%);
+}
+
 .modal {
   position: relative;
   width: 600px;
@@ -134,6 +151,7 @@ body {
 .modal__title {
   font-size: 50px;
   color: #fc0;
+  margin: 20px 50px;
 }
 
 .modal__text {
@@ -141,6 +159,7 @@ body {
 }
 
 .modal__button {
+  margin: 20px 50px;
   width: 120px;
   height: 40px;
   font-size: 20px;
