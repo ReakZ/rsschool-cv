@@ -140,3 +140,16 @@ body {
   }
 }
 //modal end
+
+//sound
+.btnSound {
+  border: none;
+  background-color: transparent;
+  font-size: 2.4rem;
+  outline: none;
+  cursor: pointer;
+}
+.fas.active {
+  color: $yellow !important;
+}
+

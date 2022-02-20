@@ -167,4 +167,16 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.btnSound {
+  border: none;
+  background-color: transparent;
+  font-size: 2.4rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.fas.active {
+  color: #fc0 !important;
+}
 /*# sourceMappingURL=style.css.map */

@@ -3,7 +3,10 @@ board.addEventListener("click", clickCell);
 let whoMove = document.querySelector(".header__whoMove");
 let btnShowStatistic = document.querySelector(".footer__stat");
 btnShowStatistic.addEventListener("click", showStatistic);
+let soundBtn = document.querySelector(".btnSound");
+soundBtn.addEventListener("click", setSound);
 let isMovePlayerX = true;
+let isSoundOn = true;
 let moveCounter = 0;
 let listWinCombinations = [
   [0, 1, 2],
@@ -173,20 +176,23 @@ function restartGame() {
 }
 
 function playSound() {
-  let audio = document.createElement("audio");
-  audio.src = "./assets/sounds/tink.wav";
-  audio.currentTime = 0;
-  audio.volume = 0.2;
-  audio.play();
+  if (isSoundOn) {
+    let audio = document.createElement("audio");
+    audio.src = "./assets/sounds/tink.wav";
+    audio.currentTime = 0;
+    audio.volume = 0.2;
+    audio.play();
+  }
 }
 
 function showStatistic() {
   let stat = localStorage.getItem("last10Games")
     ? JSON.parse(localStorage.getItem("last10Games"))
     : [];
+    let message=stat.length?`<ul>${formatingStatistic(stat)}</ul>`:"No completed matches"
   showModal({
     title: "Last ten games:",
-    text: `<ul>${formatingStatistic(stat)}</ul>`,
+    text: message,
     btn: "Close",
     func: closeModal,
   });
@@ -196,15 +202,20 @@ function formatingStatistic(str) {
   return str.map((x, i) => `<li>${i + 1}) ${x}</li>`).join("\n");
 }
 
-
-function selfTest(){
-  let desc="1) Вёрстка +10: \n -реализован интерфейс игры +5 \n -в футере приложения есть ссылка на гитхаб автора приложения, год создания приложения, логотип курса со ссылкой на курс +5 \n"+
-  "2) При кликах по игровому полю по очереди отображаются крестики и нолики. Первая фигура всегда крестик +10 \n"+
-"3) Игра завершается, когда три фигуры выстроились в ряд по вертикали, горизонтали или диагонали +10 \n"+
-"4) По окончанию игры выводится её результат - выигравшая фигура и количество ходов от начала игры до её завершения +10 \n"+
-"5) Результаты последних 10 игр сохраняются в local storage. Есть таблица рекордов, в которой отображаются результаты предыдущих 10 игр +10 \n"+
-"6) Анимации или звуки, или настройки игры. Баллы начисляются за любой из перечисленных пунктов +10 \n"
-console.log(desc)
+function selfTest() {
+  let desc =
+    "1) Вёрстка +10: \n -реализован интерфейс игры +5 \n -в футере приложения есть ссылка на гитхаб автора приложения, год создания приложения, логотип курса со ссылкой на курс +5 \n" +
+    "2) При кликах по игровому полю по очереди отображаются крестики и нолики. Первая фигура всегда крестик +10 \n" +
+    "3) Игра завершается, когда три фигуры выстроились в ряд по вертикали, горизонтали или диагонали +10 \n" +
+    "4) По окончанию игры выводится её результат - выигравшая фигура и количество ходов от начала игры до её завершения +10 \n" +
+    "5) Результаты последних 10 игр сохраняются в local storage. Есть таблица рекордов, в которой отображаются результаты предыдущих 10 игр +10 \n" +
+    "6) Анимации или звуки, или настройки игры. Баллы начисляются за любой из перечисленных пунктов +10 \n";
+  console.log(desc);
 }
 
-selfTest()
+selfTest();
+
+function setSound() {
+  isSoundOn = !isSoundOn;
+  document.querySelector(".fa-music").classList.toggle("active");
+}
