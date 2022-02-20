@@ -34,6 +34,7 @@ function clickCell(e) {
 }
 
 function makeMove(id) {
+  playSound()
   let cell = document.querySelector(`[data-id="${id}"]`);
   let currentMove = isMovePlayerX ? "X" : "O";
   cell.textContent = currentMove;
@@ -170,4 +171,12 @@ function restartGame() {
   closeModal();
   newGame();
   changeText();
+}
+
+function playSound() {
+    let audio = document.createElement("audio");
+    audio.src = "./assets/sounds/tink.wav";
+    audio.currentTime = 0;
+    audio.volume = 0.2;
+    audio.play();
 }
